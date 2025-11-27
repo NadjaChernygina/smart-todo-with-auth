@@ -6,7 +6,8 @@ export default ({mode}: any) => {
     process.env = {...process.env, ...loadEnv(mode, process.cwd())};
 
     return defineConfig({
-        plugins: [vue()],
+      plugins: [vue()],
+      base: '/smart-todo-with-auth/',
         resolve: {
             alias: {
                 "@": fileURLToPath(new URL("./src", import.meta.url)),
